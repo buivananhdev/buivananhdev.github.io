@@ -1,61 +1,91 @@
 import Link from 'next/link';
-import { TOOL_REGISTRY } from '@/config/tools-registry';
-import { ToolCard } from '@/components/ToolCard';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 
-export default function HomePage() {
-  const groupedTools = {
-    automation: TOOL_REGISTRY.filter((tool) => tool.category === 'automation'),
-    it: TOOL_REGISTRY.filter((tool) => tool.category === 'it'),
-    ai: TOOL_REGISTRY.filter((tool) => tool.category === 'ai'),
-  };
+const tools = [
+  {
+    id: 'modbus-crc',
+    title: 'Modbus RTU CRC-16 Calculator',
+    description: 'Tính toán mã CRC-16 cho dữ liệu Modbus RTU một cách chính xác và nhanh chóng.',
+    category: 'automation',
+    href: '/tools/modbus-crc',
+  },
+  {
+    id: 'json-ts',
+    title: 'JSON to TypeScript Interface',
+    description: 'Chuyển đổi JSON sang TypeScript Interface tự động với hỗ trợ cấu trúc lồng nhau.',
+    category: 'it',
+    href: '#',
+  },
+  {
+    id: 'jwt-debugger',
+    title: 'JWT Safe Debugger',
+    description: 'Giải mã JWT an toàn mà không cần gửi dữ liệu lên server.',
+    category: 'it',
+    href: '#',
+  },
+  {
+    id: 'token-counter',
+    title: 'LLM Prompt Token Counter',
+    description: 'Đếm token prompt cho các mô hình AI như GPT, Claude, Llama.',
+    category: 'ai',
+    href: '#',
+  },
+];
 
+export default function Home() {
   return (
     <>
-      <Header />
+      <header className="site-header">
+        <div className="container nav-wrap">
+          <a href="/" className="brand">
+            <span className="brand-mark">D</span>
+            <span>DevTools Hub</span>
+          </a>
+          <nav className="nav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Công cụ</a>
+            <a href="#">Tài liệu</a>
+          </nav>
+        </div>
+      </header>
 
-      <main className="page-shell">
+      <main className="container page-content">
         <section className="hero">
-          <div className="kicker">Developer Tooling Ecosystem</div>
-          <h1>DevTools Hub cho IT, Automation và AI</h1>
+          <div className="hero-kicker">⚡ Developer Tooling Ecosystem</div>
+          <h1>DevTools Hub cho IT, Automation & AI</h1>
           <p>
-            Hệ sinh thái các công cụ kỹ thuật online chạy hoàn toàn ở trình duyệt, phục vụ
-            lập trình, PLC, hệ thống tự động hóa, xử lý dữ liệu và AI prompt engineering.
+            Hệ sinh thái công cụ kỹ thuật online chạy hoàn toàn ở trình duyệt. Từ tính toán CRC cho PLC, chuyển đổi JSON sang TypeScript, đến đếm token AI — tất cả đều nhanh, an toàn và không cần backend.
           </p>
           <div className="hero-actions">
-            <Link href="#tools" className="primary-button">
-              Xem công cụ
+            <Link href="/tools/modbus-crc" className="btn btn-primary">
+              Dùng Ngay
             </Link>
-            <Link href="/tools/automation/modbus-crc-calculator" className="secondary-button">
-              Dùng ngay
-            </Link>
+            <a href="#tools" className="btn btn-secondary">
+              Xem Công Cụ
+            </a>
           </div>
         </section>
 
-        <section id="tools" className="tool-groups">
-          {Object.entries(groupedTools).map(([category, tools]) => (
-            <div key={category} className="tool-group">
-              <div className="group-header">
-                <span className="group-badge">{category.toUpperCase()}</span>
-                <h2>
-                  {category === 'automation' && 'Automation'}
-                  {category === 'it' && 'IT'}
-                  {category === 'ai' && 'AI'}
-                </h2>
-              </div>
-
-              <div className="tool-grid">
-                {tools.map((tool) => (
-                  <ToolCard key={tool.id} tool={tool} />
-                ))}
-              </div>
-            </div>
-          ))}
+        <section id="tools">
+          <h2 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Công Cụ Nổi Bật</h2>
+          <div className="tools-grid">
+            {tools.map((tool) => (
+              <a key={tool.id} href={tool.href} className="tool-card">
+                <h3>{tool.title}</h3>
+                <p>{tool.description}</p>
+                <div style={{ marginTop: '1rem', fontSize: '0.85rem', color: '#7a88a8' }}>
+                  {tool.category.toUpperCase()}
+                </div>
+              </a>
+            ))}
+          </div>
         </section>
       </main>
 
-      <Footer />
+      <footer className="site-footer">
+        <div className="container">
+          <p>© 2026 DevTools Hub | Công cụ kỹ thuật cho lập trình, tự động hóa và AI</p>
+        </div>
+      </footer>
     </>
   );
 }
