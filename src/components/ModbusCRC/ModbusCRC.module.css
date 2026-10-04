@@ -1,0 +1,111 @@
+.tool-shell {
+  display: grid;
+  gap: 2rem;
+}
+
+.tool-header {
+  background: rgba(18, 24, 38, 0.8);
+  border: 1px solid rgba(130, 160, 255, 0.2);
+  border-radius: 22px;
+  padding: 2rem;
+}
+
+.tool-card {
+  background: rgba(16, 19, 27, 0.9);
+  border: 1px solid rgba(130, 160, 255, 0.2);
+  border-radius: 22px;
+  padding: 1.5rem;
+}
+
+.tool-card--interactive {
+  display: grid;
+  gap: 1rem;
+}
+
+.field-label {
+  font-weight: 600;
+  color: #dfe7ff;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 140px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(10, 14, 22, 0.9);
+  color: #eef3ff;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  resize: vertical;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.result-box {
+  display: grid;
+  gap: 0.8rem;
+  background: rgba(8, 12, 20, 0.9);
+  border: 1px solid rgba(118, 153, 255, 0.25);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.metric-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #dfe7ff;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  padding-bottom: 0.55rem;
+}
+
+.metric-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.error-text {
+  color: #ff8c8c;
+  margin: 0;
+}
+
+.seo-content {
+  background: rgba(18, 24, 38, 0.75);
+  border: 1px solid rgba(130, 160, 255, 0.2);
+  border-radius: 22px;
+  padding: 2rem;
+  line-height: 1.8;
+}
+
+.seo-content h2,
+.seo-content h3 {
+  color: #f6f8ff;
+}
+
+.seo-content pre {
+  background: rgba(9, 13, 20, 0.9);
+  border: 1px solid rgba(160, 174, 192, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  overflow-x: auto;
+  color: #c7d9ff;
+}
+
+.qa-block,
+.faq-item {
+  margin-top: 1rem;
+}
+
+.coming-soon {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(9, 12, 19, 0.7);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}

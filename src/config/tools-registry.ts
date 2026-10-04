@@ -1,0 +1,61 @@
+import type { ToolItem } from '@/lib/types/tool';
+
+export const TOOL_REGISTRY: ToolItem[] = [
+  {
+    id: 'modbus-crc',
+    title: 'Modbus RTU CRC-16 Calculator Online',
+    description:
+      'Công cụ trực tuyến để tính toán mã CRC-16 cho dữ liệu Modbus RTU với độ chính xác kỹ thuật cao.',
+    slug: 'modbus-crc-calculator',
+    category: 'automation',
+    seoKeywords: ['modbus crc calculator', 'crc 16 online', 'tính crc modbus'],
+    seoTitle: 'Bộ Tính Mã CRC-16 Modbus RTU Online',
+    seoDescription:
+      'Tính toán CRC-16 Modbus RTU từ chuỗi Hex, hiển thị LSB/MSB, chạy hoàn toàn trên trình duyệt.',
+    status: 'live',
+  },
+  {
+    id: 'json-ts',
+    title: 'JSON to TypeScript Interface Converter',
+    description: 'Chuyển JSON thành TypeScript Interface, hỗ trợ cấu trúc lồng nhau và định dạng rõ ràng.',
+    slug: 'json-to-typescript',
+    category: 'it',
+    seoKeywords: ['json to typescript interface', 'convert json to ts interface'],
+    seoTitle: 'JSON to TypeScript Interface Converter',
+    seoDescription: 'Thuật toán chuyển đổi cấu trúc JSON sang interface TypeScript sạch đẹp.',
+    status: 'coming-soon',
+  },
+  {
+    id: 'jwt-debugger',
+    title: 'JWT Safe Debugger',
+    description: 'Giải mã JWT một cách an toàn và không cần gửi dữ liệu lên server.',
+    slug: 'jwt-debugger',
+    category: 'it',
+    seoKeywords: ['jwt debugger online', 'decode jwt client side'],
+    seoTitle: 'JWT Safe Debugger Online',
+    seoDescription: 'Giải mã phần header và payload của JWT bằng JavaScript thuần trên trình duyệt.',
+    status: 'coming-soon',
+  },
+  {
+    id: 'token-counter',
+    title: 'LLM Prompt Token Counter',
+    description: 'Đếm token prompt cho mô hình AI bằng cách ước tính theo cấu trúc GPT và dữ liệu văn bản.',
+    slug: 'prompt-token-counter',
+    category: 'ai',
+    seoKeywords: ['llm token counter', 'prompt token counter online'],
+    seoTitle: 'LLM Prompt Token Counter Online',
+    seoDescription: 'Công cụ đếm token cho prompt AI và tối ưu hóa chi phí inference.',
+    status: 'coming-soon',
+  },
+  {
+    id: 'cosine-similarity',
+    title: 'Vector Cosine Similarity Calculator',
+    description: 'Tính khoảng cách cosine giữa hai vector embedding để đo mức độ tương đồng.',
+    slug: 'cosine-similarity',
+    category: 'ai',
+    seoKeywords: ['cosine similarity calculator', 'tính vector similarity'],
+    seoTitle: 'Vector Cosine Similarity Calculator',
+    seoDescription: 'Công cụ tính cosine similarity giữa 2 vector số thực theo chuẩn AI và ML.',
+    status: 'coming-soon',
+  },
+];
